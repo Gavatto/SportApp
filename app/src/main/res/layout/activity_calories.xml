@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Поле для введення назви продукту -->
+    <EditText
+        android:id="@+id/productNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Назва продукту"
+        android:inputType="text" />
+
+    <!-- Поле для введення ваги продукту -->
+    <EditText
+        android:id="@+id/productWeightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Вага (грам)"
+        android:inputType="number" />
+
+    <!-- Кнопка розрахунку калорій -->
+    <Button
+        android:id="@+id/calculateCaloriesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Розрахувати" />
+
+
+    <!-- Результат -->
+    <TextView
+        android:id="@+id/caloriesResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат буде тут"
+        android:layout_marginTop="16dp" />
+
+    <!-- Кнопка переходу до вправ -->
+    <Button
+        android:id="@+id/goToExercisesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вправи"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:id="@+id/goToVideoCallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Відео дзвінок" />
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введіть ім'я користувача" />
+
+
+</LinearLayout>
