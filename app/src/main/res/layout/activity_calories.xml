@@ -5,56 +5,71 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Поле для введення назви продукту -->
-    <EditText
-        android:id="@+id/productNameEditText"
-        android:layout_width="match_parent"
+    <!-- Spinner для продуктів -->
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Назва продукту"
-        android:inputType="text" />
+        android:text="Виберіть продукт:"
+        android:paddingBottom="8dp"
+        android:textSize="18sp" />
+    <Spinner
+        android:id="@+id/productSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <!-- Поле для введення ваги продукту -->
+    <!-- Поле для введення ваги -->
     <EditText
         android:id="@+id/productWeightEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Вага (грам)"
-        android:inputType="number" />
+        android:hint="Введіть вагу продукту (г)"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="16dp" />
 
-    <!-- Кнопка розрахунку калорій -->
+    <!-- Вивід результату калорій -->
+    <TextView
+        android:id="@+id/caloriesResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Кнопка для обчислення -->
     <Button
         android:id="@+id/calculateCaloriesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Розрахувати" />
+        android:text="Розрахувати калорії"
+        android:layout_marginTop="16dp" />
 
-
-    <!-- Результат -->
+    <!-- Spinner для користувачів -->
     <TextView
-        android:id="@+id/caloriesResultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Результат буде тут"
+        android:text="Виберіть користувача:"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:textSize="18sp" />
+    <Spinner
+        android:id="@+id/userSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+
+    <!-- Кнопка для відеодзвінка -->
+    <Button
+        android:id="@+id/goToVideoCallButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Розпочати відео дзвінок"
         android:layout_marginTop="16dp" />
 
     <!-- Кнопка переходу до вправ -->
     <Button
         android:id="@+id/goToExercisesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Вправи"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp" />
-    <Button
-        android:id="@+id/goToVideoCallButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Відео дзвінок" />
-    <EditText
-        android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введіть ім'я користувача" />
-
-
+        android:text="Перейти до вправ"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

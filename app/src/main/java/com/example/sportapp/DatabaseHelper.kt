@@ -54,4 +54,21 @@ class DatabaseHelper(context: Context) :
     fun isValidEmail(email: String): Boolean {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
+
+    // Новий метод для отримання списку імен користувачів
+    fun getUsernames(): List<String> {
+        val usernames = mutableListOf<String>()
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT login FROM users", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val username = cursor.getString(cursor.getColumnIndexOrThrow("login"))
+                usernames.add(username)
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        return usernames
+    }
 }
